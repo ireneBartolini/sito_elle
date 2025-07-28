@@ -1,12 +1,10 @@
-/* reset.css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+
 html {
   background-color: #90C8CB;
+  scroll-padding-top: 70px; /* altezza della tua navbar */
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -26,11 +24,12 @@ input, button, textarea, select {
       padding: 60px 20px 20px 20px;
       background-color: #90C8CB;
     }
-
-    section {
-      padding: 60px 0;
-      background-color: #90C8CB;
-      border-bottom: 1px solid #ccc;
+    .hbox {
+      max-width: 200px;
+    }
+    .titolo {
+      font-size: 1.4rem;
+      color: #004AAD;
     }
 
 /*mobile first*/
@@ -56,6 +55,7 @@ input, button, textarea, select {
     .logo{
     width: 50px;
     height: auto;
+    margin: 0%;
     }
 
     .overlay-dark {
@@ -85,13 +85,21 @@ input, button, textarea, select {
             align-self: flex-start; /* riallinea immagine a sinistra */
         }
         .img-logo {
-            width: 800px;
+            width: 600px;
             height: auto;
         }
         .logo{
-            width: 80px;
+            width: 50px;
             height: auto;
         }
+        .hbox
+        {
+           max-width:fit-content; /* rimuove il limite di larghezza */
+        }
+        .titolo{
+          font-size: 2rem;
+          white-space: nowrap; /* forza il titolo su una sola riga */
+         }
 }
 
    
