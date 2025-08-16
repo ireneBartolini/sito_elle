@@ -66,6 +66,10 @@ input, button, textarea, select {
   background-color: rgba(0,0,0,0.5); /* semitrasparente scuro */
   z-index: 1;
 }
+  .card.cosa-img{
+   border-radius: 2rem;   /* arrotonda i bordi */
+   overflow: hidden;  
+}
 
 .card-img-overlay {
   z-index: 2;
