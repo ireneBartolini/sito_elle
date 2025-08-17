@@ -40,7 +40,7 @@ input, button, textarea, select {
     margin-top: 20px;
     }
 
-    .img.img-profilo {
+    .img-profilo {
     margin-left: 0px;
     margin-right: 0px;
     align-self: center; /* centra l'immagine su mobile */
@@ -87,7 +87,7 @@ input, button, textarea, select {
             flex-direction: row; /* affianca immagine e testo su desktop */
             align-items: center;
         }
-        .img.img-profilo {
+        .img-profilo {
             border-radius: 50%;
             margin-right: 40px;
             align-self: flex-start; /* riallinea immagine a sinistra */
