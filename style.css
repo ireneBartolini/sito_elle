@@ -40,13 +40,38 @@ input, button, textarea, select {
     margin-top: 20px;
     }
 
-    .img.img-profilo {
+    .img-profilo {
     margin-left: 0px;
     margin-right: 0px;
     align-self: center; /* centra l'immagine su mobile */
-    border-color: black;
-    background-color: rgba(0,0,0,0.5); /* semitrasparente scuro */
+    
     }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;   /* scegli tu la misura */
+  border-radius: 50%;   /* rende il contenitore tondo */
+  overflow: hidden;     /* nasconde ciò che esce dal cerchio */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* riempie il cerchio senza deformarsi */
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;   /* anche l’overlay deve essere tondo */
+  border-color: black;
+  background-color: rgba(0,0,0,0.5); /* nero semitrasparente */
+}
 
     .img-logo {
     width: 400px;
@@ -87,7 +112,7 @@ input, button, textarea, select {
             flex-direction: row; /* affianca immagine e testo su desktop */
             align-items: center;
         }
-        .img.img-profilo {
+        .img-profilo {
             border-radius: 50%;
             margin-right: 40px;
             align-self: flex-start; /* riallinea immagine a sinistra */
