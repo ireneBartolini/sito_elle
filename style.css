@@ -68,15 +68,37 @@ input, button, textarea, select {
   background-color: rgba(0,0,0,0.5); /* semitrasparente scuro */
   z-index: 1;
 }
-  .card.cosa-img{
+
+/* Stato chiuso */
+.image-col {
+  width: 100%;
+}
+
+.card.cosa-img{
    border-radius: 2rem;   /* arrotonda i bordi */
    overflow: hidden;  
 }
 
-.card-img-overlay {
-  z-index: 2;
-  color: white;
-}
+
+  .card-description {
+    display: none;
+  }
+
+  .expandable.expanded {
+    display: flex;
+    flex-direction: column; /* immagine sopra, testo sotto */
+  }
+
+  .expandable.expanded .image-col {
+    width: 100%; /* immagine full width */
+  }
+
+  .expandable.expanded .card-description {
+    display: block;  /* ora si mostra */
+    width: 100%;
+    padding: 1rem;
+    background: #f8f9fa;
+  }
 
 
   @media (min-width: 768px) {
@@ -108,6 +130,22 @@ input, button, textarea, select {
         .titolo{
           font-size: 2rem;
          }
+
+        .expandable.expanded {
+          display: flex;
+          flex-direction: row;
+        }
+         /* Stato aperto */
+        .expandable.expanded .image-col {
+          width: 33.333%; /* 1/3 */
+        }
+
+        .expandable.expanded .card-description {
+          display: block;
+          width: 66.666%; /* 2/3 */
+          padding: 1rem;
+          background: #f8f9fa;
+        }
 }
 
    

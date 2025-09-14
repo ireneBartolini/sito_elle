@@ -109,16 +109,58 @@
         <div class="container">
 
           <h2 class="py-5">Di cosa mi occupo </h2>  
+          <script>
+            function toggleExpand(card) {
+              const col = card.closest(".card-col");
+
+              if (card.classList.contains("expanded")) {
+                col.classList.remove("col-lg-12");
+                col.classList.add("col-lg-4");
+                card.classList.remove("expanded");
+                return;
+              }
+
+              // Chiudi le altre
+              document.querySelectorAll(".card-col").forEach(c => {
+                c.classList.remove("col-lg-12");
+                c.classList.add("col-lg-4");
+                c.querySelector(".expandable").classList.remove("expanded");
+              });
+
+              // Apri questa
+              col.classList.remove("col-lg-4");
+              col.classList.add("col-lg-12");
+              card.classList.add("expanded");
+            }
+          </script>
+
+
             <div class="row g-4">
-            <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="card text-bg-dark cosa-img">
-                        <img src="img/riabilitazione_muscolo_scheletrica.jpeg" class="card-img" alt="...">
-                        <div class="overlay-dark d-flex align-items-center justify-content-center text-center"></div>
-                        <div class="card-img-overlay">
-                            <h5 class="card-title text-light">Riabilitazione muscoloscheletrica</h5>                      
-                        </div>
+            
+            <!-- Card -->
+              <div class="col-12 col-sm-6 col-lg-4 card-col">
+                <div class="card expandable" onclick="toggleExpand(this)">
+                  <div class="row g-0 align-items-center">
+      
+                    <!-- Immagine fissa -->
+                    <div class="image-col cosa-img">
+                      <img src="img\riabilitazione_muscolo_scheletrica.jpg" class="card-img" alt="...">
                     </div>
-            </div>
+
+                    <!-- Descrizione (inizialmente nascosta, prende 2/3) -->
+                    <div class="card-description">
+                      <p>
+                        La riabilitazione muscoloscheletrica consiste in un percorso terapeutico volto a recuperare forza, mobilità e funzionalità di muscoli, articolazioni e tessuti connettivi in caso di infortuni, traumi o patologie croniche. Attraverso esercizio terapeutico mirato e tecniche manuali aiuta a ridurre dolore, migliorare mobilità e forza e ripristinare la funzionalità del corpo, favorendo il ritorno alle attività quotidiane e sportive. 
+                        E’ utile iniziare un percorso fisioterapico personalizzato in caso di: dolori muscolari o articolari: lombalgia, cervicalgia, dolori a spalle, ginocchia, anche. 
+                        Traumi o infortuni sportivi: distorsioni, stiramenti, contusioni, lesioni tendinee o legamentose. Alterazioni posturali o squilibri muscolari: scoliosi, ipercifosi, iperlordosi, posture scorrette. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+  
              <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card text-bg-dark cosa-img">
                         <img src="img/riabilitazione_post_chirurgica.jpeg" class="card-img" alt="...">
