@@ -126,6 +126,12 @@ input, button, textarea, select {
   transform: rotate(-45deg);
 }
 
+.introduzione{
+  color: white ;
+  padding-bottom: 50px  ;
+  text-align: center ;
+  }
+
   @media (min-width: 768px) {
         .content {
           min-width: none;
@@ -170,6 +176,9 @@ input, button, textarea, select {
           width: 66.666%; /* 2/3 */
           padding: 1rem;
           background: white;
+        }
+        .introduzione{
+          font-size: 1.2rem;
         }
       
 }
