@@ -49,10 +49,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-lg-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#fisio">Fisioterapia con Elena</a>
+            <a class="nav-link" aria-current="page" href="#chi">Un po' di me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#chi">Un po' di me</a>
+            <a class="nav-link" aria-current="page" href="#fisio">Fisioterapia con Elena</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#cosa">Di cosa mi occupo</a>
@@ -77,28 +77,13 @@
   <section id="home" class="h-100 w-100 container d-flex align-items-center justify-content-center py-5">
     <!-- logo-->
       <div class="container">
-        <img src="img/fisioelle3.png" alt="Elena Bartolini" class="img-logo img-fluid d-block mx-auto">
+        <img src="img/fisio_elle.jpg" alt="Elena Bartolini" class="img-logo img-fluid d-block mx-auto">
         <p class="introduzione">
           Mi chiamo <strong>Elena Bartolini</strong>  e sono una <strong>fisioterapista</strong >. Pratico la mia professione a <strong>Bologna e provincia</strong> , in ambito <strong>ospedaliero</strong>, <strong>ambulatoriale</strong>  ed <strong>a domicilio</strong>.
         </p>
       </div>
   </section>
 
-</div>
-
-<div id="fisio" class="content d-flex flex-column justify-content-center align-items-center">
-  
-  <section class="h-100 w-100 container d-flex align-items-center justify-content-center py-5">
-    <div class="container">
-      <h2 class="py-5">FISIOTERAPIA CON ELENA</h2>  
-      <p>
-        Le basi per un trattamento fisioterapico efficace si pongono durante la <strong>visita iniziale</strong> , nella quale ti ascolterò, faremo un’attenta raccolta anamnestica ed una valutazione mirata ad inquadrare il problema. <strong>Definiremo insieme gli obiettivi del nostro percorso</strong>.<br/>
-        Ti seguirò in un <strong>percorso fisioterapico personalizzato</strong>, per aiutarti a ritrovare il benessere ed a mantenerlo nel lungo periodo.<br/>
-        <br/>
-        👉 Ricorda: ogni piccolo progresso è un grande passo verso il tuo obiettivo. Con impegno, costanza e fiducia nel percorso, potrai tornare a muoverti con libertà e serenità, riscoprendo il piacere delle attività che ami.
-      </p>
-       </div>
-  </section>
 </div>
 
 
@@ -127,6 +112,20 @@
   </section>
 </div>
 
+<div id="fisio" class="content d-flex flex-column justify-content-center align-items-center">
+  
+  <section class="h-100 w-100 container d-flex align-items-center justify-content-center py-5">
+    <div class="container">
+      <h2 class="py-5">FISIOTERAPIA CON ELENA</h2>  
+      <p>
+        Le basi per un trattamento fisioterapico efficace si pongono durante la <strong>visita iniziale</strong> , nella quale ti ascolterò, faremo un’attenta raccolta anamnestica ed una valutazione mirata ad inquadrare il problema. <strong>Definiremo insieme gli obiettivi del nostro percorso</strong>.<br/>
+        Ti seguirò in un <strong>percorso fisioterapico personalizzato</strong>, per aiutarti a ritrovare il benessere ed a mantenerlo nel lungo periodo.<br/>
+        <br/>
+        👉 Ricorda: ogni piccolo progresso è un grande passo verso il tuo obiettivo. Con impegno, costanza e fiducia nel percorso, potrai tornare a muoverti con libertà e serenità, riscoprendo il piacere delle attività che ami.
+      </p>
+       </div>
+  </section>
+</div>
 
 
 <div id="cosa" class="content">
@@ -179,13 +178,14 @@
             
             <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable">
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
                       <div class="overlay-hint">Clicca per scoprire di più</div>
-                      <img src="img\riabilitazione_muscolo_scheletrica.jpg" class="card-img" alt="...">
+                      <img src="img\riabilitazione_muscolo_scheletrica.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
+                    </img>
                     </div>
 
                     <!-- Descrizione (inizialmente nascosta, prende 2/3) -->
@@ -204,12 +204,12 @@
   
             <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable" >
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
-                      <img src="img\riabilitazione_post_chirurgica.jpg" class="card-img" alt="...">
+                      <img src="img\riabilitazione_post_chirurgica.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
                       <span class="expand-icon">▼</span>
                     </div>
 
@@ -237,12 +237,12 @@
               
               <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable">
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
-                      <img src="img\RPG.jpg" class="card-img" alt="...">
+                      <img src="img\RPG.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
                       <span class="expand-icon">+</span>
                     </div>
 
@@ -260,12 +260,12 @@
 
               <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable" >
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
-                      <img src="img\riabilitazione_neurologica.jpg" class="card-img" alt="...">
+                      <img src="img\riabilitazione_neurologica.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
                     </div>
 
                     <!-- Descrizione (inizialmente nascosta, prende 2/3) -->
@@ -283,12 +283,12 @@
 
              <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable" >
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
-                      <img src="img\pilates_riabilitativo.jpg" class="card-img" alt="...">
+                      <img src="img\pilates_riabilitativo.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
                     </div>
 
                     <!-- Descrizione (inizialmente nascosta, prende 2/3) -->
@@ -304,12 +304,12 @@
 
               <!-- Card -->
               <div class="col-12 col-sm-6 col-lg-4 card-col">
-                <div class="card expandable" onclick="toggleExpand(this)">
+                <div class="card expandable">
                   <div class="row g-0 align-items-center">
       
                     <!-- Immagine fissa -->
                     <div class="image-col cosa-img">
-                      <img src="img\idrokinesi_terapia.jpg" class="card-img" alt="...">
+                      <img src="img\idrokinesi_terapia.jpg" class="card-img" alt="..." onclick="toggleExpand(this.closest('.card'))">
                     </div>
 
                     <!-- Descrizione (inizialmente nascosta, prende 2/3) -->
