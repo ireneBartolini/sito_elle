@@ -97,9 +97,56 @@ input, button, textarea, select {
     display: block;  /* ora si mostra */
     width: 100%;
     padding: 1rem;
-    background: #f8f9fa;
+    background: white;
   }
 
+.introduzione {
+  font-style: oblique;
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #004AAD;
+  padding-bottom: 50px;
+}
+
+.overlay-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.expandable:hover .overlay-hint {
+  opacity: 1;
+}
+
+.image-col {
+  position: relative;
+}
+
+/* Freccia sull'immagine */
+.expand-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  color: #495057;
+  border-radius: 50%;
+  padding: 6px 8px;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  pointer-events: none; /* non blocca il click sulla card */
+}
+
+/* Quando la card è espansa → freccia ruotata */
+.expandable.expanded .expand-icon {
+  transform: rotate(-90deg);
+}
 
   @media (min-width: 768px) {
         .content {
@@ -144,7 +191,10 @@ input, button, textarea, select {
           display: block;
           width: 66.666%; /* 2/3 */
           padding: 1rem;
-          background: #f8f9fa;
+          background: white;
+        }
+        .introduzione {
+          font-size: 1.5rem;
         }
 }
 
