@@ -85,6 +85,12 @@ input, button, textarea, select {
     display: none;
   }
 
+  .card.expandable {
+    border-radius: 10px;        /* regola a piacere */
+    overflow: hidden;          /* IMPORTANT: permette all'immagine di essere ritagliata ai bordi */
+    background: transparent;   /* se vuoi background diverso, adattalo */
+  }
+  
   .expandable.expanded {
     display: flex;
     flex-direction: column; /* immagine sopra, testo sotto */
@@ -132,7 +138,9 @@ input, button, textarea, select {
   text-align: center ;
   }
 
-  @media (min-width: 768px) {
+  
+
+  @media (min-width: 992px) {
         .content {
           min-width: none;
         }
@@ -161,22 +169,46 @@ input, button, textarea, select {
         .titolo{
           font-size: 2rem;
          }
-
+        
+         
         .expandable.expanded {
           display: flex;
           flex-direction: row;
-        }
+           }
+           /* sovrascrive l'allineamento della .row (tu hai align-items-center in HTML) */
+        .expandable.expanded .row {
+            align-items: stretch !important; /* fa sì che i figli abbiano la stessa altezza */
+            margin: 0; /* evita margini residuali della row dentro la card */
+          }
+
          /* Stato aperto */
         .expandable.expanded .image-col {
           width: 33.333%; /* 1/3 */
+          display: block;
         }
 
+        /* L'immagine riempie la colonna e mantiene le proporzioni;
+        object-fit cover per riempire l'area senza deformare */
+      .expandable.expanded .image-col img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
         .expandable.expanded .card-description {
-          display: block;
-          width: 66.666%; /* 2/3 */
+          flex: 1 1 66.666%;
+          max-width: 66.666%;
+          height: 100%;              /* stessa altezza dell'immagine */
+          overflow-y: auto;          /* scroll se il testo è troppo lungo */
           padding: 1rem;
-          background: white;
-        }
+          background: #fff;
+          box-sizing: border-box;
+
+          display: flex;             /* flex container */
+          flex-direction: column;    /* verticale */
+          justify-content: center;   /* centra verticalmente se il contenuto è più basso */
+      }
         .introduzione{
           font-size: 1.2rem;
         }
